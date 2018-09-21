@@ -1,0 +1,173 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5759087305,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestStepDefination.BeforeTest()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Verify Error Message For Invalid Card Data",
+        "description": "",
+        "id": "card-decline;verify-error-message-for-invalid-card-data;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 152765553,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestStepDefination.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 84840807,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am logged in to the application with testkiprosh@gmail.com and Test@123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testkiprosh@gmail.com",
+                  "offset": 39
+                },
+                {
+                  "val": "Test@123",
+                  "offset": 65
+                }
+              ],
+              "location": "TestStepDefination.I_am_logged_into_application(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51405837510,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I make a booking from Madrid to Dublin on 18/10/2018 for 1 adults , 1 teen , 0 child and 0 infant",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Madrid",
+                  "offset": 22
+                },
+                {
+                  "val": "Dublin",
+                  "offset": 32
+                },
+                {
+                  "val": "18/10/2018",
+                  "offset": 42
+                },
+                {
+                  "val": "1",
+                  "offset": 57
+                },
+                {
+                  "val": "1",
+                  "offset": 68
+                },
+                {
+                  "val": "0",
+                  "offset": 77
+                },
+                {
+                  "val": "0",
+                  "offset": 89
+                }
+              ],
+              "location": "TestStepDefination.i_want_to_write_a_step_with_precondition(String,String,String,String,String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 565386,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I pay for booking with card details 5555 5555 5555 5557 , 1018 and 265",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5555 5555 5555 5557 ",
+                  "offset": 36
+                },
+                {
+                  "val": " 1018",
+                  "offset": 57
+                },
+                {
+                  "val": "265",
+                  "offset": 67
+                }
+              ],
+              "location": "TestStepDefination.i_pay_for_booking_with_card_details_ww_ww_and_ww(String,String,String)"
+            },
+            "matchedColumns": [
+              9,
+              10,
+              11
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67367,
+              "status": "passed"
+            },
+            "output": [
+              "Finished scenario"
+            ],
+            "line": 8,
+            "name": "I should get payment declined message",
+            "match": {
+              "location": "TestStepDefination.some_other_action()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Card Decline",
+    "description": "",
+    "id": "card-decline",
+    "keyword": "Feature",
+    "uri": "src/test/resource/features/testcases.feature"
+  }
+]

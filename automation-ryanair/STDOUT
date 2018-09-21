@@ -1,0 +1,18 @@
+Feature: Card Decline
+
+  @tag1
+  Scenario Outline: Verify Error Message For Invalid Card Data                                                                                      # src/test/resource/features/testcases.feature:4
+    Given I am logged in to the application with <username> and <password>
+    And I make a booking from <source> to <destination> on <date> for <no_adults> adults , <no_teen> teen , <no_child> child and <no_infant> infant
+    When I pay for booking with card details <card_number> , <card_exp> and <card_cvv>
+    Then I should get payment declined message
+
+    Examples: 
+Finished scenario
+
+  @tag1
+  Scenario Outline: Verify Error Message For Invalid Card Data                                            # src/test/resource/features/testcases.feature:12
+    Given I am logged in to the application with testkiprosh@gmail.com and Test@123                       # TestStepDefination.I_am_logged_into_application(String,String)
+    And I make a booking from Madrid to Dublin on 18/10/2018 for 1 adults , 1 teen , 0 child and 0 infant # TestStepDefination.i_want_to_write_a_step_with_precondition(String,String,String,String,String,String,String)
+    When I pay for booking with card details 5555 5555 5555 5557 , 1018 and 265                           # TestStepDefination.i_pay_for_booking_with_card_details_ww_ww_and_ww(String,String,String)
+    Then I should get payment declined message                                                            # TestStepDefination.some_other_action()
