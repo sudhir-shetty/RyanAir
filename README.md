@@ -52,13 +52,11 @@ Reporting will be done during each transaction on Web Element. On every checkpoi
 
 This file is to create the initial driver.
     
-5. Feature File: **automation-ryanair/src/test/resource/featues/testcases.feature**
-
-Contains the BDD cases.
+6. Feature File: **automation-ryanair/src/test/resource/featues/testcases.feature**
+ - Contains the BDD cases.
     
-6. Runner File: **com.mytest.automation_ryanair.runner**
-
-Contains the file for running the feature files.
+7. Runner File: **com.mytest.automation_ryanair.runner**
+ - Contains the file for running the feature files.
 
 
 
