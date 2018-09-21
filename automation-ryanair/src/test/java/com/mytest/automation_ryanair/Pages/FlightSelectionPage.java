@@ -9,7 +9,16 @@ public class FlightSelectionPage {
 	public FlightSelectionPage(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	public Page AddedToBasket() {
+		Page object = new Page(driver);
+		object.name = "Added To Basket Message";
+		object.by = By.xpath("//*[contains(text(),'Added to basket')]");
+		return object;
+	}
 
+	
+	
 	public Page FirstFlightButton() {
 		Page object = new Page(driver);
 		object.name = "First Flight button";
@@ -57,10 +66,10 @@ public class FlightSelectionPage {
 		return object;
 	}
 
-	public Page AvailableSeat(int number) {
+	public Page AvailableSeat(int offset) {
 		Page object = new Page(driver);
 		object.name = "Available Seat";
-		object.by = By.xpath("(//span[@class='seat-row-seat priority'])["+number+"]/span");
+		object.by = By.xpath("(//span[@class='seat-row-seat priority'])["+offset+"]/span");
 		return object;
 	}
 

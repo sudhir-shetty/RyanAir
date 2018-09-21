@@ -16,6 +16,7 @@ public class LoginPopupPageFunctions extends LoginPopUpPaage{
 		UsernameTextbox().ClearAndEnterTxt(username);
 		PasswordTextBox().ClearAndEnterTxt(password);
 		LoginButton().ClickOnElement();
+		UserAvataar().AssertElementIsDisplayedWithSeconds(3);
 	}
 
 }

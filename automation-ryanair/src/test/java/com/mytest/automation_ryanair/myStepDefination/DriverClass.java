@@ -29,7 +29,7 @@ public class DriverClass {
 		driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
 		driver.get("https://www.ryanair.com/ie/en");
 		driver.findElement(By.xpath("//div/*[@id='glyphs.close']")).click();
-		//driver.manage().window().fullscreen();
+		driver.manage().window().fullscreen();
 		return driver;
 
 	}

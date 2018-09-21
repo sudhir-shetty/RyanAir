@@ -13,7 +13,7 @@ public class RyanAirHomePage {
 	public Page OneWayRadioButton() {
 		Page object = new Page(driver);
 		object.name = "One-Way Radio button";
-		object.by = By.id("flight-search-type-option-one-way");
+		object.by = By.xpath("//input[@type='radio' and @id='flight-search-type-option-one-way' ]");
 		return object;
 	}
 

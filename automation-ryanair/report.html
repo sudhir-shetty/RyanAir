@@ -30,7 +30,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -43,7 +42,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-				<span class='label suite-start-time'>Sep 21, 2018 1:32:03 PM</span>
+				<span class='label suite-start-time'>Sep 21, 2018 10:10:06 PM</span>
 			</a>
 			<a href='#!'>
 				<span class='label'>v3.0.3</span>
@@ -65,8 +64,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -127,10 +124,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> test(s) passed</span>
+					<span><span class='strong'>4</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>1</span> test(s) failed, <span class='strong'>2</span> others
+					<span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -142,10 +139,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>1</span> step(s) passed</span>
+					<span><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>1</span> step(s) failed, <span class='strong'>21</span> others
+					<span class='strong'>0</span> step(s) failed, <span class='strong'>52</span> others
 				</div>
 			</div>
 		</div>
@@ -160,61 +157,25 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Card Decline</span>
-						<span class='test-time'>Sep 21, 2018 1:32:03 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Sep 21, 2018 10:10:06 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 21, 2018 1:32:03 PM</span>
-	<span class='label end-time'>Sep 21, 2018 1:34:11 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 2m 7s+781ms</span>
+	<span class='label start-time'>Sep 21, 2018 10:10:06 PM</span>
+	<span class='label end-time'>Sep 21, 2018 10:11:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 52s+923ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1  fail' status='fail' test-id='2'>
+				<li class='node level-1  pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Scenario Outline: Verify Error Message For Invalid Card Data</div>						
-						<span class='node-time'>Sep 21, 2018 1:32:03 PM</span>
-						<span class='node-duration'>0h 2m 7s+779ms</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:03 PM</td>
-													<td class='step-details'><table><tr><td>username</td><td>password</td><td>source</td><td>destination</td><td>date</td><td>no_adults</td><td>no_teen</td><td>no_child</td><td>no_infant</td><td>card_number</td><td>card_exp</td><td>card_cvv</td></tr><tr><td>testkiprosh@gmail.com</td><td>Test@123</td><td>Madrid</td><td>Dublin</td><td>18/10/2018</td><td>1</td><td>1</td><td>0</td><td>0</td><td>5555 5555 5555 5557</td><td>1018</td><td>265</td></tr></table></td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2  fail' status='fail' test-id='3'>
-					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: Verify Error Message For Invalid Card Data</div>						
-						<span class='node-time'>Sep 21, 2018 1:32:03 PM</span>
-						<span class='node-duration'>0h 2m 7s+767ms</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-3 leaf pass' status='pass' test-id='4'>
-					<div class='collapsible-header'>
-						<div class='node-name'>Given I am logged in to the application with testkiprosh@gmail.com and Test@123</div>						
-						<span class='node-time'>Sep 21, 2018 1:32:31 PM</span>
-						<span class='node-duration'>0h 0m 0s+81ms</span>
+						<span class='node-time'>Sep 21, 2018 10:10:06 PM</span>
+						<span class='node-duration'>0h 1m 52s+920ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -228,22 +189,110 @@
 											</tr>
 										</thead>
 										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:06 PM</td>
+													<td class='step-details'><table><tr><td>username</td><td>password</td><td>source</td><td>destination</td><td>date</td><td>no_adults</td><td>no_teen</td><td>no_child</td><td>card_number</td><td>card_type</td><td>card_exp_month</td><td>card_exp_year</td><td>card_cvv</td><td>card_holder</td></tr><tr><td>testkiprosh@gmail.com</td><td>Test@123</td><td>Madrid</td><td>Dublin</td><td>07/12/2018</td><td>2</td><td>1</td><td>1</td><td>5555555555555557</td><td>MasterCard</td><td>10</td><td>2019</td><td>265</td><td>Pika Pika</td></tr></table></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2  pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: Verify Error Message For Invalid Card Data</div>						
+						<span class='node-time'>Sep 21, 2018 10:10:06 PM</span>
+						<span class='node-duration'>0h 1m 52s+907ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>@tag1</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:39 PM</td>
+													<td class='step-details'>As per the given WebElement paths. We couldnt find any Infant fields. If script failed because of this, the please check the infant path.</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-3 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given I am logged in to the application with testkiprosh@gmail.com and Test@123</div>						
+						<span class='node-time'>Sep 21, 2018 10:10:10 PM</span>
+						<span class='node-duration'>0h 0m 13s+212ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:11 PM</td>
+													<td class='step-details'>Clicked on  field 'Login Link'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:13 PM</td>
+													<td class='step-details'>Entered text 'testkiprosh@gmail.com' in to field 'Username Textbox'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:14 PM</td>
+													<td class='step-details'>Entered text 'Test@123' in to field 'Password Textbox'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:15 PM</td>
+													<td class='step-details'>Clicked on  field 'Login Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:24 PM</td>
+													<td class='step-details'>PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!! User Avataar</td>
+												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:32:31 PM</td>
+													<td class='timestamp'>10:10:24 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2994660478158323607.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2994660478158323607.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot8455680736206269791.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot8455680736206269791.png'></li>
+										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf fail' status='fail' test-id='5'>
+				<li class='node level-3 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
-						<div class='node-name'>And I make a booking from Madrid to Dublin on 18/10/2018 for 1 adults , 1 teen , 0 child and 0 infant</div>						
-						<span class='node-time'>Sep 21, 2018 1:32:31 PM</span>
-						<span class='node-duration'>0h 1m 39s+170ms</span>
-						<span class='test-status right fail'>fail</span>
+						<div class='node-name'>And I make a booking from Madrid to Dublin on 07/12/2018 for 2 , 1 and 1</div>						
+						<span class='node-time'>Sep 21, 2018 10:10:24 PM</span>
+						<span class='node-duration'>0h 0m 57s+181ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -258,197 +307,176 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:32 PM</td>
+													<td class='timestamp'>10:10:24 PM</td>
 													<td class='step-details'>Clicked on  field 'One-Way Radio button'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:33 PM</td>
+													<td class='timestamp'>10:10:25 PM</td>
 													<td class='step-details'>Entered text 'Madrid' in to field 'From:'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:34 PM</td>
+													<td class='timestamp'>10:10:26 PM</td>
 													<td class='step-details'>Entered text 'Dublin' in to field 'To:'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:37 PM</td>
+													<td class='timestamp'>10:10:28 PM</td>
 													<td class='step-details'>Clicked on  field 'Lets Go'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:38 PM</td>
-													<td class='step-details'>Entered text '18' in to field 'Day'</td>
+													<td class='timestamp'>10:10:30 PM</td>
+													<td class='step-details'>Entered text '07' in to field 'Day'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:40 PM</td>
-													<td class='step-details'>Entered text '10' in to field 'Month'</td>
+													<td class='timestamp'>10:10:31 PM</td>
+													<td class='step-details'>Entered text '12' in to field 'Month'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:41 PM</td>
+													<td class='timestamp'>10:10:32 PM</td>
 													<td class='step-details'>Entered text '2018  s' in to field 'Year'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:43 PM</td>
+													<td class='timestamp'>10:10:34 PM</td>
 													<td class='step-details'>Clicked on  field 'Passenger Selector'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:44 PM</td>
+													<td class='timestamp'>10:10:35 PM</td>
 													<td class='step-details'>Displayed Value '1' fors element 'Adult Increment Button'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:44 PM</td>
+													<td class='timestamp'>10:10:35 PM</td>
+													<td class='step-details'>Clicked on  field 'Adult Increment Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:36 PM</td>
+													<td class='step-details'>Displayed Value '2' fors element 'Adult Increment Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:36 PM</td>
 													<td class='step-details'>Displayed Value '0' fors element 'Teen Increment Button'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:44 PM</td>
+													<td class='timestamp'>10:10:36 PM</td>
 													<td class='step-details'>Clicked on  field 'Teen Increment Button'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:45 PM</td>
+													<td class='timestamp'>10:10:38 PM</td>
 													<td class='step-details'>Displayed Value '1' fors element 'Teen Increment Button'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:45 PM</td>
+													<td class='timestamp'>10:10:38 PM</td>
+													<td class='step-details'>Displayed Value '0' fors element 'Children Increment Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:38 PM</td>
+													<td class='step-details'>Clicked on  field 'Children Increment Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:39 PM</td>
+													<td class='step-details'>Displayed Value '1' fors element 'Children Increment Button'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:39 PM</td>
 													<td class='step-details'>Clicked on  field 'Passenger Selector'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:47 PM</td>
+													<td class='timestamp'>10:10:40 PM</td>
 													<td class='step-details'>Clicked on  field 'Agree Terms Condition Check'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:48 PM</td>
+													<td class='timestamp'>10:10:41 PM</td>
 													<td class='step-details'>Clicked on  field 'Lets Go'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:32:58 PM</td>
+													<td class='timestamp'>10:10:48 PM</td>
 													<td class='step-details'>Clicked on  field '19'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:33:02 PM</td>
+													<td class='timestamp'>10:10:49 PM</td>
 													<td class='step-details'>Clicked on  field '9'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:33:08 PM</td>
+													<td class='timestamp'>10:10:52 PM</td>
 													<td class='step-details'>Clicked on  field '8'</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:33:09 PM</td>
-													<td class='step-details'>Clicked on  field '8'</td>
+													<td class='timestamp'>10:10:58 PM</td>
+													<td class='step-details'>Clicked on  field 'Seat Message'</td>
 												</tr>
-												<tr class='log' status='fail'>
-													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>1:34:11 PM</td>
-													<td class='step-details'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@id='ngdialog2']//div[contains(@class,'seat-map-prompt')]//button (tried for 60 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForElementToBeVisible(Page.java:41)
-	at com.mytest.automation_ryanair.Pages.Page.GetWebElement(Page.java:36)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForClickable(Page.java:207)
-	at com.mytest.automation_ryanair.PageFunctions.FlightSelectionPageFunctions.SeatSelectionProcess(FlightSelectionPageFunctions.java:28)
-	at com.mytest.automation_ryanair.myStepDefination.TestStepDefination.i_want_to_write_a_step_with_precondition(TestStepDefination.java:34)
-	at ✽.And I make a booking from Madrid to Dublin on 18/10/2018 for 1 adults , 1 teen , 0 child and 0 infant(src/test/resource/features/testcases.feature:6)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id='ngdialog2']//div[contains(@class,'seat-map-prompt')]//button
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'sudhirkumarsMBP.home', ip: 'fe80:0:0:0:4fe:9fde:50dc:9d6e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.4', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForElementToBeVisible(Page.java:41)
-	at com.mytest.automation_ryanair.Pages.Page.GetWebElement(Page.java:36)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForClickable(Page.java:207)
-	at com.mytest.automation_ryanair.PageFunctions.FlightSelectionPageFunctions.SeatSelectionProcess(FlightSelectionPageFunctions.java:28)
-	at com.mytest.automation_ryanair.myStepDefination.TestStepDefination.i_want_to_write_a_step_with_precondition(TestStepDefination.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
-</pre></td>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:10:59 PM</td>
+													<td class='step-details'>Clicked on  field '14'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:01 PM</td>
+													<td class='step-details'>Clicked on  field '14'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:03 PM</td>
+													<td class='step-details'>Clicked on  field '14'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:05 PM</td>
+													<td class='step-details'>Clicked on  field '14'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:13 PM</td>
+													<td class='step-details'>Clicked on  field '6'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:20 PM</td>
+													<td class='step-details'>Clicked on  field '6'</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:11:21 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5862445840826430175.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5862445840826430175.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5907600320322618742.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5907600320322618742.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot7523716129757073056.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot7523716129757073056.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2376434905033779709.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2376434905033779709.png'></li>
+										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='6'>
+				<li class='node level-3 leaf pass' status='pass' test-id='6'>
 					<div class='collapsible-header'>
-						<div class='node-name'>When I pay for booking with card details 5555 5555 5555 5557 , 1018 and 265</div>						
-						<span class='node-time'>Sep 21, 2018 1:34:11 PM</span>
-						<span class='node-duration'>0h 0m 0s+1ms</span>
-						<span class='test-status right skip'>skip</span>
+						<div class='node-name'>When I pay for booking with card details 5555555555555557 , MasterCard , 10 , 2019 , 265 and Pika Pika</div>						
+						<span class='node-time'>Sep 21, 2018 10:11:21 PM</span>
+						<span class='node-duration'>0h 0m 31s+90ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -461,22 +489,97 @@ Driver info: driver.version: unknown
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:34:11 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:25 PM</td>
+													<td class='step-details'>Clicked on  field '9'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:27 PM</td>
+													<td class='step-details'>Clicked on  field '15'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:40 PM</td>
+													<td class='step-details'>Selected Text 'Spain' in to field 'phoneNumberCountry'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:41 PM</td>
+													<td class='step-details'>Entered text '667545678' in to field 'phoneNumber'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:42 PM</td>
+													<td class='step-details'>Entered text '5555555555555557' in to field 'Checkout	'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:43 PM</td>
+													<td class='step-details'>Selected Text 'MasterCard' in to field 'Card Type'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:44 PM</td>
+													<td class='step-details'>Selected Text '10' in to field 'expiryMonth'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:45 PM</td>
+													<td class='step-details'>Selected Text '2019' in to field 'expiryYear'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:46 PM</td>
+													<td class='step-details'>Entered text '265' in to field 'SecurityCode'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:47 PM</td>
+													<td class='step-details'>Entered text 'Pika Pika' in to field 'Holder Name'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:48 PM</td>
+													<td class='step-details'>Entered text 'ytchsqikow' in to field 'billingAddressAddressLine1'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:49 PM</td>
+													<td class='step-details'>Entered text 'vjpgoasifa' in to field 'billingAddressCity'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:50 PM</td>
+													<td class='step-details'>Clicked on  field 'Accept Terms'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:51 PM</td>
+													<td class='step-details'>Clicked on  field 'Pay Now'</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:11:52 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5344483089980555656.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot5344483089980555656.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot69531729920002922.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot69531729920002922.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot4691058325585752646.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot4691058325585752646.png'></li>
+										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='7'>
+				<li class='node level-3 leaf pass' status='pass' test-id='7'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I should get payment declined message</div>						
-						<span class='node-time'>Sep 21, 2018 1:34:11 PM</span>
-						<span class='node-duration'>0h 0m 0s+0ms</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='node-time'>Sep 21, 2018 10:11:52 PM</span>
+						<span class='node-duration'>0h 0m 6s+604ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -489,13 +592,34 @@ Driver info: driver.version: unknown
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:34:11 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:58 PM</td>
+													<td class='step-details'>PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!! Pay Now</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:58 PM</td>
+													<td class='step-details'>Displayed text 'Oh. There was a problem
+As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again' fors element 'Pay Now'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:11:59 PM</td>
+													<td class='step-details'>PASS --- MESSAGE SUCCESSFULLY  !!! As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:11:59 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2790408161868282917.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot2790408161868282917.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot7209678768287226167.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot7209678768287226167.png'></li>
+												<li><img data-featherlight='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot1998199935209642019.png' width='10%' src='' data-src='/Users/sudhir/git/RyanAir/automation-ryanair/screenshots/screenshot1998199935209642019.png'></li>
+										</ul>
 								</div>
 						</div>
 				</li>
@@ -559,13 +683,13 @@ Driver info: driver.version: unknown
 					<div class='category-heading'>
 						<span class='category-name'>@tag1</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -580,9 +704,9 @@ Driver info: driver.version: unknown
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 21, 2018 1:32:03 PM</td>
+										<td>Sep 21, 2018 10:10:06 PM</td>
 										<td class='linked' test-id='3'>Card Decline.Scenario Outline: Verify Error Message For Invalid Card Data.Scenario: Verify Error Message For Invalid Card Data</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -600,150 +724,7 @@ Driver info: driver.version: unknown
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-					<i class='material-icons'>search</i> Search
-				</a>
-				
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-				
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-
-	<div class='subview-left left'>
-		
-		<div class='view-summary'>
-			<h5>Exceptions</h3>
-			<ul id='exception-collection' class='exception-collection'>
-				
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>	
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 21, 2018 1:32:03 PM</td>
-										<td class='linked' test-id='3'>Card Decline.Scenario Outline: Verify Error Message For Invalid Card Data.Scenario: Verify Error Message For Invalid Card Data</td>
-										<td><pre><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@id='ngdialog2']//div[contains(@class,'seat-map-prompt')]//button (tried for 60 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForElementToBeVisible(Page.java:41)
-	at com.mytest.automation_ryanair.Pages.Page.GetWebElement(Page.java:36)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForClickable(Page.java:207)
-	at com.mytest.automation_ryanair.PageFunctions.FlightSelectionPageFunctions.SeatSelectionProcess(FlightSelectionPageFunctions.java:28)
-	at com.mytest.automation_ryanair.myStepDefination.TestStepDefination.i_want_to_write_a_step_with_precondition(TestStepDefination.java:34)
-	at ✽.And I make a booking from Madrid to Dublin on 18/10/2018 for 1 adults , 1 teen , 0 child and 0 infant(src/test/resource/features/testcases.feature:6)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id='ngdialog2']//div[contains(@class,'seat-map-prompt')]//button
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'sudhirkumarsMBP.home', ip: 'fe80:0:0:0:4fe:9fde:50dc:9d6e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.4', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForElementToBeVisible(Page.java:41)
-	at com.mytest.automation_ryanair.Pages.Page.GetWebElement(Page.java:36)
-	at com.mytest.automation_ryanair.Pages.Page.WaitForClickable(Page.java:207)
-	at com.mytest.automation_ryanair.PageFunctions.FlightSelectionPageFunctions.SeatSelectionProcess(FlightSelectionPageFunctions.java:28)
-	at com.mytest.automation_ryanair.myStepDefination.TestStepDefination.i_want_to_write_a_step_with_precondition(TestStepDefination.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
-	at org.junit.runners.Suite.runChild(Suite.java:128)
-	at org.junit.runners.Suite.runChild(Suite.java:27)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
-</pre></pre></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -757,25 +738,25 @@ Driver info: driver.version: unknown
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>23</div>
+					<div class='panel-lead'>56</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 21, 2018 1:32:03 PM</div>
+					<div class='panel-lead'>Sep 21, 2018 10:10:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 21, 2018 1:34:11 PM</div>
+			 		<div class='panel-lead'>Sep 21, 2018 10:11:59 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>128,323ms</div>
+					<div class='panel-lead'>113,224ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -791,8 +772,8 @@ Driver info: driver.version: unknown
 						</tr>
 						<tr>
 							<td>@tag1</td>
-							<td>0</td>
 							<td>1</td>
+							<td>0</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -807,22 +788,22 @@ Driver info: driver.version: unknown
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 1,
+				passParent: 4,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 2,
-				exceptionsParent: 3,
+				skipParent: 0,
+				exceptionsParent: 0,
 				
-				passChild: 1,
-				failChild: 1,
+				passChild: 4,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 2,
-				infoChild: 19,
-				exceptionsChild: 3,
+				skipChild: 0,
+				infoChild: 52,
+				exceptionsChild: 0,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 import com.mytest.automation_ryanair.Pages.FlightSelectionPage;
 
-
 public class FlightSelectionPageFunctions extends FlightSelectionPage {
 
 	public FlightSelectionPageFunctions(WebDriver driver) {
@@ -13,23 +12,26 @@ public class FlightSelectionPageFunctions extends FlightSelectionPage {
 
 	public void SelectFirstFlightAndContinue() throws Exception {
 
-		FirstFlightButton().WaitForClickable();
+		FirstFlightButton().WaitForElementToBeClickable();
 		FirstFlightButton().JavascriptClickElement();
-		FirstFlightButton().WaitForClickable();
+		ChoosePlusFare().WaitForClickable();
 		ChoosePlusFare().JavascriptClickElement();
 		ContinueButton().WaitForClickable();
-		ContinueButton().JavascriptClickElement();
+		AddedToBasket().CheckElementToBeDisplayed(10);
+		ContinueButton().WaitForClickable();
 		ContinueButton().JavascriptClickElement();
 
 	}
 
 	public void SeatSelectionProcess(String numberOfAdult, String numberOfTeens, String numberOfChild)
 			throws Exception {
-		SeatMessageButton().WaitForClickable();
+		SeatMessageButton().CheckElementToBeDisplayed(10);
 		SeatMessageButton().ClickOnElement();
 		SelectSeats(numberOfAdult, numberOfTeens, numberOfChild);
-		ReviewButton().ClickOnElement();
-		ConfirmationButton().ClickOnElement();
+		SeatMessageButton().CheckElementToBeDisplayed(1);
+		ReviewButton().JavascriptClickElement();
+		SeatMessageButton().CheckElementToBeDisplayed(1);
+		ConfirmationButton().JavascriptClickElement();
 	}
 
 	public void SelectSeats(String numberOfAdult, String numberOfTeens, String numberOfChild) throws Exception {
@@ -37,9 +39,11 @@ public class FlightSelectionPageFunctions extends FlightSelectionPage {
 		int teen = Integer.parseInt(numberOfTeens);
 		int child = Integer.parseInt(numberOfChild);
 		int total = adult + teen + child;
+		int randomOffset;
 		for (int i = 1; i <= total; i++) {
-			AvailableSeat(i).JavascriptClickElement();
-			AvailableSeat(i).DeadWait(500);
+			randomOffset=(int )(Math.random() * ((10 - 1) + 1)) + 1;
+			AvailableSeat(randomOffset).JavascriptClickElement();
+			AvailableSeat(randomOffset).DeadWait(1000);
 		}
 
 	}

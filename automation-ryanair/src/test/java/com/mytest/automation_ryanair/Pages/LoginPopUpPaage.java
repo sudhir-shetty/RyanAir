@@ -38,4 +38,11 @@ public class LoginPopUpPaage {
 		object.by = By.xpath("//div[@class='modal-form-group']//button");
 		return object;
 	}
+	
+	public Page UserAvataar() {
+		Page object = new Page(driver);
+		object.name = "User Avataar";
+		object.by = By.xpath("//div[contains(@class,'avatar-user')]");
+		return object;
+	}
 }

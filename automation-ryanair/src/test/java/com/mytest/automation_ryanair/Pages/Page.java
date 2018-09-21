@@ -2,6 +2,7 @@ package com.mytest.automation_ryanair.Pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -10,14 +11,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
+
+import org.junit.Assert;
 
 public class Page {
 
@@ -37,6 +42,13 @@ public class Page {
 		return driver.findElement(by);
 	}
 
+	public List<WebElement> GetWebElements() {
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		List<WebElement> list = driver.findElements(by);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		return list;
+	}
+
 	public void WaitForElementToBeVisible() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(this.by));
 		((JavascriptExecutor) driver).executeScript("window.focus();");
@@ -53,7 +65,21 @@ public class Page {
 		GetWebElement().sendKeys(text);
 		GetWebElement().sendKeys(Keys.TAB);
 		Reporter.addStepLog("Entered text '" + text + "' in to field '" + name + "'");
-		DeadWait(1000);
+		DeadWait(800);
+	}
+
+	public void SelectElementByIndex(String index) {
+		Select selectElement = new Select(GetWebElement());
+		selectElement.selectByIndex(Integer.parseInt(index));
+		Reporter.addStepLog("Selected Index '" + index + "' in to field '" + name + "'");
+		DeadWait(800);
+	}
+
+	public void SelectElementBytext(String Text) {
+		Select selectElement = new Select(GetWebElement());
+		selectElement.selectByVisibleText(Text);
+		Reporter.addStepLog("Selected Text '" + Text + "' in to field '" + name + "'");
+		DeadWait(800);
 	}
 
 	public void ClickOnElement() throws Exception {
@@ -67,13 +93,21 @@ public class Page {
 		while (true) {
 			try {
 				JavascriptExecutor je = (JavascriptExecutor) driver;
-				je.executeScript("arguments[0].scrollIntoView(true);",GetWebElement());
+				je.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				GetWebElement().click();
 				Reporter.addStepLog("Clicked on  field '" + name + "'");
-				DeadWait(1000);
+				DeadWait(800);
 				return;
-			} catch (Exception e) {
-				
+			} catch (WebDriverException e) {
+
+				if (tries-- == 0)
+					throw e;
+				else
+					DeadWait(5000);
+			}
+
+			catch (Exception e) {
+
 				if (tries-- == 0)
 					throw e;
 				else
@@ -111,7 +145,7 @@ public class Page {
 			}
 		}
 	}
-	
+
 	public void JavascriptClickElement() throws Exception {
 
 //		try {
@@ -124,9 +158,8 @@ public class Page {
 		while (true) {
 			try {
 
-				
-				JavascriptExecutor executor = (JavascriptExecutor)driver;
-				executor.executeScript("arguments[0].scrollIntoView(true);",GetWebElement());
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				executor.executeScript("arguments[0].click();", GetWebElement());
 				Reporter.addStepLog("Clicked on  field '" + name.length() + "'");
 				DeadWait(1000);
@@ -173,7 +206,7 @@ public class Page {
 
 	public boolean CheckElementPresence() {
 		try {
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
 			new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(this.by));
 			if (driver.findElements(by).size() > 0)
 				;
@@ -207,6 +240,52 @@ public class Page {
 		if (!GetWebElement().isEnabled())
 			wait.until(ExpectedConditions.elementToBeClickable(by));
 
+	}
+
+	public boolean CheckElementToBeDisplayed(int seconds) throws IOException {
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		int tries = seconds;
+		while (true) {
+			try {
+
+				driver.findElement(by);
+				TakeScreenShot();
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				return true;
+			} catch (Exception e) {
+				if (tries-- == 0) {
+					TakeScreenShot();
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					return false;
+				} else
+					DeadWait(1000);
+			}
+		}
+	}
+
+	public void AssertElementIsDisplayedWithSeconds(int sec) throws IOException {
+		if (CheckElementToBeDisplayed(sec)) {
+			TakeScreenShot();
+			Reporter.addStepLog("PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!! " + name);
+
+		} else {
+			TakeScreenShot();
+			Reporter.addStepLog("FAIL --- ELEMENT NOT DISPLAYED !!! " + name);
+			Assert.fail("<b>ELEMENT NOT DISPLAYED</b>");
+		}
+	}
+
+	public void AssertTextLogIfTheElementInDisplayedWithSeconds(String expected) throws IOException {
+		if (GetTextOfElement().contains(expected)) {
+			TakeScreenShot();
+			Reporter.addStepLog("PASS --- MESSAGE SUCCESSFULLY DISPLAYED !!! " + expected);
+
+		} else {
+			TakeScreenShot();
+			Reporter.addStepLog("FAIL --- MESSAGE NOT DISPLAYED !!! EXPECTED MESSAGE ---->  " + expected);
+			Reporter.addStepLog("FAIL --- ACTUAL MESSAGE ----> " + expected);
+			Assert.fail("<b>WRONG MESSAGE DISPLAYED</b>");
+		}
 	}
 
 }

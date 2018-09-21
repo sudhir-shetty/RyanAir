@@ -13,7 +13,9 @@ public class RyanAirHomePageFunctions extends RyanAirHomePage {
 	}
 
 	public void FillIternary(String source, String destination, String date, String numberOfAdults,
-			String numberOfTeens, String numberOfChildrens, String numberOfInfants) throws Exception {
+			String numberOfTeens, String numberOfChildrens) throws Exception {
+		
+		OneWayRadioButton().WaitForClickable();
 		OneWayRadioButton().ClickOnElement();
 		SourceInputBox().ClearAndEnterTxt(source);
 		DestinationInputbox().ClearAndEnterTxt(destination);
@@ -24,7 +26,6 @@ public class RyanAirHomePageFunctions extends RyanAirHomePage {
 		SelectNumberOfPassengers(AdultSeatText(), AdultIncrementButton(), numberOfAdults);
 		SelectNumberOfPassengers(TeenSeatText(), TeenIncrementButton(), numberOfTeens);
 		SelectNumberOfPassengers(ChildrenSeatText(), ChildrenIncrementButton(), numberOfChildrens);
-		SelectNumberOfPassengers(InfantSeatText(), InfantIncrementButton(), numberOfInfants);
 		PassengerSelector().ClickOnElement();
 		AgreeTermsConditionCheck().ClickOnElement();
 		LetsGoButton().ClickOnElement();	
