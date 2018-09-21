@@ -33,32 +33,25 @@ The automation framework consists of the following technologies:
 There are 7 main components of the framework:
 
 1. Page Objects: -  **com.mytest.automation_ryanair.Pages**
-
-Page Object classes will contain all the web element paths and their description. The description will be later used for logging. These classes will return the object of Page.java class. The Page.java class will also contain all the operation function for the web elements.
+    - Page Object classes will contain all the web element paths and their description. The description will be later used for logging. These classes will return the object of Page.java class. The Page.java class will also contain all the operation function for the web elements.
     
 2. Page Function: -  **com.mytest.automation_ryanair.PageFunctions**
-    
-Page Function classes will contain the functions for the web pages. These classes will extend their Page classes and inherit all the Page element. 
+    - Page Function classes will contain the functions for the web pages. These classes will extend their Page classes and inherit all the Page element. 
     
 3. Step Defination: -  **com.mytest.automation_ryanair.myStepDefination**
-
-Step Definition will call the operations from the Page Function classes by creating objects. They will also pass the driver session and data to the Page function classes.
+    - Step Definition will call the operations from the Page Function classes by creating objects. They will also pass the driver session and data to the Page function classes.
     
 4. Reporting and logging: -  **RyanAir/report.html**
-
-Reporting will be done during each transaction on the Web Element. On every checkpoint, screenshot will be taken and added to the report.
+    - Reporting will be done during each transaction on the Web Element. On every checkpoint, screenshot will be taken and added to the report.
    
 5. Driverclass: -  **com.mytest.automation_ryanair.myStepDefination.DriverClass.java**
-
-This file is to create the initial driver.
+    - This file is to create the initial driver. Also the implicit waits as initialized here.
     
 6. Feature File: **automation-ryanair/src/test/resource/featues/testcases.feature**
- 
-Contains the BDD cases.
+    - Contains the BDD cases.
     
 7. Runner File: **com.mytest.automation_ryanair.runner**
- 
-Contains the file for running the feature files.
+    - Contains the file for running the feature files.
 
 
 
