@@ -91,7 +91,8 @@ https://ibb.co/eSg3uz
 https://www.useloom.com/share/6629f207886a40429acce716197a4188
 
 
-NOTE : I NOTICED SOME RANDOM BUGS IN THE APPLICATION:
+
+**NOTE : I NOTICED SOME RANDOM BUGS IN THE APPLICATION:
 1. After selecting the Flight, the Seat selection window is sometimes not loaded. We need to refresh the page and restart the entire process.
 2. I was able to complete the booking with one of the invalid card data :
 https://www.useloom.com/share/0002d1d378744964ae520851d56bd243
