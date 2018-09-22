@@ -112,6 +112,7 @@ public class CheckOutPageFunctions extends CheckOutPage {
 
 	public void CheckCardDeclineMessageIsDisplayed() throws IOException {
 		ErrorPrompt().AssertElementIsDisplayedWithSeconds(15);
+
 		ErrorPrompt().AssertTextLogIfTheElementInDisplayedWithSeconds(
 				"As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again");
 

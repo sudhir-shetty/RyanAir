@@ -90,7 +90,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4796618161,
+  "duration": 4749229672,
   "status": "passed"
 });
 formatter.scenario({
@@ -161,7 +161,7 @@ formatter.match({
   "location": "TestStepDefination.I_am_logged_into_application(String,String)"
 });
 formatter.result({
-  "duration": 13210401926,
+  "duration": 7915519319,
   "status": "passed"
 });
 formatter.match({
@@ -194,7 +194,7 @@ formatter.match({
   "location": "TestStepDefination.i_want_to_write_a_step_with_precondition(String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 57182079599,
+  "duration": 56805394001,
   "status": "passed"
 });
 formatter.match({
@@ -227,19 +227,19 @@ formatter.match({
   "location": "TestStepDefination.i_pay_for_booking_with_card_details_ww_ww_and_ww(String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 31090324172,
+  "duration": 28541050968,
   "status": "passed"
 });
 formatter.match({
   "location": "TestStepDefination.some_other_action()"
 });
 formatter.result({
-  "duration": 6603822999,
+  "duration": 5367419835,
   "status": "passed"
 });
 formatter.write("Finished scenario");
 formatter.after({
-  "duration": 182899584,
+  "duration": 171839124,
   "status": "passed"
 });
 });
