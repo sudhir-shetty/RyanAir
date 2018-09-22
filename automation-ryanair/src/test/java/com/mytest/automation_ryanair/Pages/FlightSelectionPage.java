@@ -28,7 +28,7 @@ public class FlightSelectionPage {
 
 	public Page ChoosePlusFare() {
 		Page object = new Page(driver);
-		object.name = "Plus Fare";
+		object.name = "Plus Fare Option";
 		object.by = By.xpath("(//span[@class='flights-table-fares__fare-radio'])[2]");
 		return object;
 	}
@@ -75,14 +75,14 @@ public class FlightSelectionPage {
 
 	public Page ReviewButton() {
 		Page object = new Page(driver);
-		object.name = "Review";
+		object.name = "Review Button";
 		object.by = By.xpath("//*[@button-text='trips.seats.seatmap_review-seats']//button");
 		return object;
 	}
 
 	public Page ConfirmationButton() {
 		Page object = new Page(driver);
-		object.name = "Review";
+		object.name = "Confirmation Button";
 		object.by = By.xpath("//*[@button-text='trips.seats.confirm']//button");
 		return object;
 	}

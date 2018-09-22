@@ -12,6 +12,7 @@ public class FlightSelectionPageFunctions extends FlightSelectionPage {
 
 	public void SelectFirstFlightAndContinue() throws Exception {
 
+		FirstFlightButton().CheckElementToBeDisplayed(4);
 		FirstFlightButton().WaitForElementToBeClickable();
 		FirstFlightButton().JavascriptClickElement();
 		ChoosePlusFare().WaitForClickable();

@@ -19,7 +19,7 @@ public class RyanAirHomePageFunctions extends RyanAirHomePage {
 		OneWayRadioButton().ClickOnElement();
 		SourceInputBox().ClearAndEnterTxt(source);
 		DestinationInputbox().ClearAndEnterTxt(destination);
-		LetsGoButton().DeadWait(1000);
+		LetsGoButton().CheckElementToBeDisplayed(1);
 		LetsGoButton().ClickOnElement();
 		EnterStartDate(date);
 		PassengerSelector().ClickOnElement();

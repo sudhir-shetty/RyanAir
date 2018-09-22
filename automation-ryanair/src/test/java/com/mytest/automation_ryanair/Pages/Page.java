@@ -64,30 +64,25 @@ public class Page {
 		GetWebElement().clear();
 		GetWebElement().sendKeys(text);
 		GetWebElement().sendKeys(Keys.TAB);
-		Reporter.addStepLog("Entered text '" + text + "' in to field '" + name + "'");
+		Reporter.addStepLog("Entered text '" + text + "' in to field '" + this.name + "'");
 		DeadWait(800);
 	}
 
 	public void SelectElementByIndex(String index) {
 		Select selectElement = new Select(GetWebElement());
 		selectElement.selectByIndex(Integer.parseInt(index));
-		Reporter.addStepLog("Selected Index '" + index + "' in to field '" + name + "'");
+		Reporter.addStepLog("Selected Index '" + index + "' in field '" + this.name + "'");
 		DeadWait(800);
 	}
 
 	public void SelectElementBytext(String Text) {
 		Select selectElement = new Select(GetWebElement());
 		selectElement.selectByVisibleText(Text);
-		Reporter.addStepLog("Selected Text '" + Text + "' in to field '" + name + "'");
+		Reporter.addStepLog("Selected Text '" + Text + "' in field '" + this.name + "'");
 		DeadWait(800);
 	}
 
 	public void ClickOnElement() throws Exception {
-//		try {
-//			TakeScreenShot();
-//		} catch (IOException e1) {
-//			e1.printStackTrace();
-//		}
 		WaitForClickable();
 		int tries = 5;
 		while (true) {
@@ -95,7 +90,7 @@ public class Page {
 				JavascriptExecutor je = (JavascriptExecutor) driver;
 				je.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				GetWebElement().click();
-				Reporter.addStepLog("Clicked on  field '" + name + "'");
+				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
 				DeadWait(800);
 				return;
 			} catch (WebDriverException e) {
@@ -134,7 +129,7 @@ public class Page {
 				ob.click(GetWebElement());
 				Action action = ob.build();
 				action.perform();
-				Reporter.addStepLog("Clicked on  field '" + name + "'");
+				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
 				DeadWait(1000);
 				return;
 			} catch (Exception e) {
@@ -148,11 +143,6 @@ public class Page {
 
 	public void JavascriptClickElement() throws Exception {
 
-//		try {
-//			TakeScreenShot();
-//		} catch (IOException e1) {
-//			e1.printStackTrace();
-//		}
 		WaitForClickable();
 		int tries = 5;
 		while (true) {
@@ -161,7 +151,7 @@ public class Page {
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
 				executor.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				executor.executeScript("arguments[0].click();", GetWebElement());
-				Reporter.addStepLog("Clicked on  field '" + name.length() + "'");
+				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
 				DeadWait(1000);
 				return;
 			} catch (Exception e) {
@@ -175,14 +165,14 @@ public class Page {
 
 	public String GetTextOfElement() {
 		String text = GetWebElement().getText();
-		Reporter.addStepLog("Displayed text '" + text + "' fors element '" + name + "'");
+		Reporter.addStepLog("Displayed text '" + text + "' on element '" + this.name + "'");
 
 		return text;
 	}
 
 	public String GetValueOfElement() {
 		String text = GetWebElement().getAttribute("value");
-		Reporter.addStepLog("Displayed Value '" + text + "' fors element '" + name + "'");
+		Reporter.addStepLog("Displayed Value '" + text + "' fors element '" + this.name + "'");
 		System.out.println(text);
 
 		return text;
@@ -193,7 +183,9 @@ public class Page {
 		File screenFile = new File("screenshots/" + screenshot.getName());
 		Files.copy(screenshot, screenFile);
 
-		Reporter.addScreenCaptureFromPath(screenFile.getAbsolutePath(), name);
+		Reporter.addStepLog(
+				" Screenshot: <img data-featherlight='" + screenFile.getAbsolutePath() + "' width='40%' src='"
+						+ screenFile.getAbsolutePath() + "' data-src='" + screenFile.getAbsolutePath() + "'>");
 	}
 
 	public void DeadWait(int miliSex) {
@@ -266,11 +258,14 @@ public class Page {
 	public void AssertElementIsDisplayedWithSeconds(int sec) throws IOException {
 		if (CheckElementToBeDisplayed(sec)) {
 			TakeScreenShot();
-			Reporter.addStepLog("PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!! " + name);
+			Reporter.addStepLog(
+					"<b><font size='2' color='green'>PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!!</font></b> "
+							+ this.name);
 
 		} else {
 			TakeScreenShot();
-			Reporter.addStepLog("FAIL --- ELEMENT NOT DISPLAYED !!! " + name);
+			Reporter.addStepLog(
+					"<b><font size='2' color='red'>FAIL --- ELEMENT NOT DISPLAYED !!! </font></b>" + this.name);
 			Assert.fail("<b>ELEMENT NOT DISPLAYED</b>");
 		}
 	}
@@ -278,12 +273,14 @@ public class Page {
 	public void AssertTextLogIfTheElementInDisplayedWithSeconds(String expected) throws IOException {
 		if (GetTextOfElement().contains(expected)) {
 			TakeScreenShot();
-			Reporter.addStepLog("PASS --- MESSAGE SUCCESSFULLY DISPLAYED !!! " + expected);
+			Reporter.addStepLog("<b><font size='2' color='green'>PASS --- MESSAGE SUCCESSFULLY DISPLAYED !!! </font></b>" + expected);
 
 		} else {
 			TakeScreenShot();
-			Reporter.addStepLog("FAIL --- MESSAGE NOT DISPLAYED !!! EXPECTED MESSAGE ---->  " + expected);
-			Reporter.addStepLog("FAIL --- ACTUAL MESSAGE ----> " + expected);
+			Reporter.addStepLog(
+					"<b><font size='2' color='red'>FAIL --- MESSAGE NOT DISPLAYED !!! EXPECTED MESSAGE ---->  </font></b>"
+							+ expected);
+			Reporter.addStepLog("<b><font size='2' color='red'>FAIL --- ACTUAL MESSAGE ----> </font></b>" + expected);
 			Assert.fail("<b>WRONG MESSAGE DISPLAYED</b>");
 		}
 	}

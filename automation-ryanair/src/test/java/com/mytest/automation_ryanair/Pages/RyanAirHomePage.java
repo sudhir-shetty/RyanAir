@@ -68,7 +68,7 @@ public class RyanAirHomePage {
 
 	public Page AdultSeatText() {
 		Page object = new Page(driver);
-		object.name = "Adult Increment Button";
+		object.name = "No. of selected Adult Seat";
 		object.by = By.xpath("//div[@label='Adults']//input");
 		return object;
 	}
@@ -82,7 +82,7 @@ public class RyanAirHomePage {
 
 	public Page TeenSeatText() {
 		Page object = new Page(driver);
-		object.name = "Teen Increment Button";
+		object.name = "No. of selected Teen Seat";
 		object.by = By.xpath("//div[@label='Teens']//input");
 		return object;
 	}
@@ -96,7 +96,7 @@ public class RyanAirHomePage {
 
 	public Page ChildrenSeatText() {
 		Page object = new Page(driver);
-		object.name = "Children Increment Button";
+		object.name = "No. of Children Seat";
 		object.by = By.xpath("//div[@label='Children']//input");
 		return object;
 	}
@@ -110,7 +110,7 @@ public class RyanAirHomePage {
 
 	public Page InfantSeatText() {
 		Page object = new Page(driver);
-		object.name = "Infant Increment Button";
+		object.name = "No. of Infant Seat";
 		object.by = By.xpath("//div[@label='Infants']//input");
 		return object;
 	}

@@ -40,7 +40,7 @@ public class CheckOutPage {
 
 	public Page GeneralPassengerTitle() {
 		Page object = new Page(driver);
-		object.name = "Title	";
+		object.name = "Passenger Title";
 		object.by = By.xpath("(//select[contains(@id,'title')])");
 		return object;
 	}
@@ -82,21 +82,21 @@ public class CheckOutPage {
 
 	public Page GeneralInfantFirstName() {
 		Page object = new Page(driver);
-		object.name = "Passenger Name	";
+		object.name = "Infant First Name";
 		object.by = By.xpath("(//input[contains(@id,'infFirst')])");
 		return object;
 	}
 
 	public Page GeneralInfantLastName() {
 		Page object = new Page(driver);
-		object.name = "Passenger Name	";
+		object.name = "Infant Last Name	";
 		object.by = By.xpath("(//input[contains(@id,'infLast')])");
 		return object;
 	}
 
 	public Page CardNumber() {
 		Page object = new Page(driver);
-		object.name = "Checkout	";
+		object.name = "Card Number";
 		object.by = By.xpath("//input[contains(@id,'cardNumber')]");
 		return object;
 	}
@@ -110,56 +110,56 @@ public class CheckOutPage {
 
 	public Page ExpiryMonth() {
 		Page object = new Page(driver);
-		object.name = "expiryMonth";
+		object.name = "Expiry Month";
 		object.by = By.xpath("//select[contains(@id,'expiryMonth')]");
 		return object;
 	}
 
 	public Page ExpiryYear() {
 		Page object = new Page(driver);
-		object.name = "expiryYear";
+		object.name = "Expiry Year";
 		object.by = By.xpath("//select[contains(@name,'expiryYear')]");
 		return object;
 	}
 
 	public Page PhoneNumberCountry() {
 		Page object = new Page(driver);
-		object.name = "phoneNumberCountry";
+		object.name = "Phone Number Country";
 		object.by = By.xpath("//select[contains(@name,'phoneNumberCountry')]");
 		return object;
 	}
 
 	public Page PhoneNumber() {
 		Page object = new Page(driver);
-		object.name = "phoneNumber";
+		object.name = "Phone Number";
 		object.by = By.xpath("//input[contains(@name,'phoneNumber')]");
 		return object;
 	}
 
 	public Page BillingAddressAddressLine1() {
 		Page object = new Page(driver);
-		object.name = "billingAddressAddressLine1";
+		object.name = "Billing Address Line 1";
 		object.by = By.xpath("//input[contains(@name,'billingAddressAddressLine1')]");
 		return object;
 	}
 
 	public Page BillingAddressCity() {
 		Page object = new Page(driver);
-		object.name = "billingAddressCity";
+		object.name = "Billing Address City";
 		object.by = By.xpath("//input[contains(@name,'billingAddressCity')]");
 		return object;
 	}
 
 	public Page SecurityCode() {
 		Page object = new Page(driver);
-		object.name = "SecurityCode";
+		object.name = "Security Code(CVV)";
 		object.by = By.xpath("//input[contains(@name,'securityCode')]");
 		return object;
 	}
 
 	public Page CardHolderName() {
 		Page object = new Page(driver);
-		object.name = "Holder Name";
+		object.name = "Card Holder Name";
 		object.by = By.xpath("//input[contains(@name,'cardHolderName')]");
 		return object;
 	}
@@ -180,7 +180,7 @@ public class CheckOutPage {
 
 	public Page ErrorPrompt() {
 		Page object = new Page(driver);
-		object.name = "Pay Now";
+		object.name = "Error Message Prompt";
 		object.by = By.xpath("//prompt[contains(@class,'error prompt-text')]");
 		return object;
 	}
