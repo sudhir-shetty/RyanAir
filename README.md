@@ -104,4 +104,4 @@ https://www.awesomescreenshot.com/image/3624748/a38a54a234ffff7fe104a6ad66d9a9e4
 
 **Note 2: Some of the customer data is hardcoded.**
 
-This is just for demo purpose. In real automation, we can easily use a config file or Data table and any other data storage method to make it data-driven.
+This is just for demo purpose. In real automation, we can easily use a config file or Data table or any other data storage method to make it data-driven.
