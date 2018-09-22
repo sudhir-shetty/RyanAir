@@ -97,4 +97,5 @@ https://www.useloom.com/share/6629f207886a40429acce716197a4188
 1. After selecting the Flight, the Seat selection window is sometimes not loaded. We need to refresh the page and restart the entire process.
 2. The checkout button gets stuck sometimes. We need to go back and reselect the seats and retry checkout.
 3. Sometimes no flights are shown for valid itinerary data. After restarting the browser, the flights are shown again. (maybe cache issue).
+https://www.awesomescreenshot.com/image/3624748/a38a54a234ffff7fe104a6ad66d9a9e4
 
