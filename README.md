@@ -18,7 +18,7 @@ The automation framework consists of the following technologies:
 **Steps to run the script:**
 1. **Clone the GitHub Repository.**
 2. **Import the Maven Project.**
-3. **Run the project. (Run-> Maven test). This is automatically run the Cucumber Runner field and execute the script.**
+3. **Run the project. (Run-> Maven test). This is automatically run the Cucumber Runner file and execute the script.**
 4. **Reports should be saved in the following location: /Users/<username>/git/RyanAir/report.html**
     
     
