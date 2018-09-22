@@ -1,6 +1,6 @@
 # RyanAir
 
-The automation framework consists of the following technologies:
+**The automation framework consists of the following technologies:**
 1. Java
 2. Maven 
 3. Junit
