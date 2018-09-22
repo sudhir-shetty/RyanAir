@@ -11,12 +11,21 @@ The automation framework consists of the following technologies:
 8. Screenshots of the checkpoints.
 
 
+-------------------------------------
 
-**Steps to run the script:
+
+
+**Steps to run the script:**
 1. **Clone the GitHub Repository.**
 2. **Import the Maven Project.**
 3. **Run the project. (Run-> Maven test). This is automatically run the Cucumber Runner field and execute the script.**
 4. **Reports should be saved in the following location: /Users/<username>/git/RyanAir/report.html**
+    
+    
+    
+ -------------------------------------
+    .
+    
 
 
 
@@ -53,6 +62,8 @@ There are 7 main components of the framework:
     - Contains the file for running the feature files.
 
 
+-------------------------------------
+
 
 **Sample BDD:**
 
@@ -75,6 +86,8 @@ Feature: Card Decline
       | testkiprosh@gmail.com | Test@123 | Madrid | Dublin      | 07/12/2018 |         2 |       1 |        1 | 5555555555555557 | MasterCard |             10 |          2019 |      265 | Pika Pika   |
 
 
+-------------------------------------
+
 
 Report Snapshot:
 
@@ -83,12 +96,17 @@ https://ibb.co/gvTNnK
 https://ibb.co/eSg3uz
 
 
+-------------------------------------
+
 
 
 **Video recording of the execution process:**
 
 https://www.useloom.com/share/6629f207886a40429acce716197a4188
 
+
+
+-------------------------------------
 
 **Comments:**
 
