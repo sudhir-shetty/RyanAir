@@ -24,12 +24,12 @@ The automation framework consists of the following technologies:
     
     
  -------------------------------------
-    .
+    
     
 
 
 
-**Pre-conditions:**
+.**Pre-conditions:**.
 1. Only valid data should be given to the script.
 2. No. of Plus Seats should be available for booking.
 3. Chrome should be installed (tested on the latest version).
