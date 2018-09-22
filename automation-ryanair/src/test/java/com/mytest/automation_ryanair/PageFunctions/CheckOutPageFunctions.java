@@ -99,7 +99,6 @@ public class CheckOutPageFunctions extends CheckOutPage {
 		ExpiryYear().SelectElementBytext(ExpiryYear);
 		SecurityCode().ClearAndEnterTxt(SecurityCode);
 		CardHolderName().ClearAndEnterTxt(CardHolder);
-
 		BillingAddressAddressLine1().ClearAndEnterTxt(new CommonFunctions().RandomString(10));
 		BillingAddressCity().ClearAndEnterTxt(new CommonFunctions().RandomString(10));
 
