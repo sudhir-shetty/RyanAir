@@ -18,7 +18,7 @@
 **Steps to run the script:**
 1. **Clone the GitHub Repository.**
 2. **Import the Maven Project.**
-3. **Run the project. (Run-> Maven test). This is automatically run the Cucumber Runner file and execute the script.**
+3. **Run the project. (Run-> Maven test). This should automatically run the Cucumber Runner file and execute the script.**
 4. **Reports should be saved in local GIT directory: git/RyanAir/report.html**
     
     
@@ -89,7 +89,7 @@ Feature: Card Decline
       | testkiprosh@gmail.com | Test@123 | Madrid | Dublin      | 07/12/2018 |         2 |       1 |        1 | 5555555555555557 | MasterCard |             10 |          2019 |      265 | Pika Pika   |
 
 
-**NOTE : The test case is data-driven and should generate random user data(first & last name, title, etc) for the number of passengers specified in the Data Table. The test data can be changed and tested with different combinations of data.**
+**NOTE : The test case is data-driven and should also generate random user data(first & last name, title, etc) for the number of passengers specified in the Data Table. The test data can be changed and tested with different combinations of data.**
 
 -------------------------------------
 
@@ -126,4 +126,4 @@ https://www.awesomescreenshot.com/image/3624748/a38a54a234ffff7fe104a6ad66d9a9e4
 
 **Note 2: Some of the customer data is hardcoded.**
 
-This is just for demo purpose. In real automation, we can easily use a config file or Data table or any other data storage method to make it data-driven.
+This is just for demo purpose. During actual automation, we can easily use a config file or Data table or any other data storage method to make it data-driven.
