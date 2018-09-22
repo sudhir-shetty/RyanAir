@@ -89,7 +89,7 @@ Feature: Card Decline
       | testkiprosh@gmail.com | Test@123 | Madrid | Dublin      | 07/12/2018 |         2 |       1 |        1 | 5555555555555557 | MasterCard |             10 |          2019 |      265 | Pika Pika   |
 
 
-**NOTE : The test case is data-driven and should generate random user data(first & last name, title, etc) for the number of passengers specified in the Data Table. The test data can be changed and tested with different combinations of data.**
+**NOTE : The test case is data-driven and should also generate random user data(first & last name, title, etc) for the number of passengers specified in the Data Table. The test data can be changed and tested with different combinations of data.**
 
 -------------------------------------
 
