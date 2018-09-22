@@ -96,9 +96,9 @@ Feature: Card Decline
 
 Report Snapshot:
 
-https://ibb.co/gvTNnK
+https://www.awesomescreenshot.com/image/3624996/3165f0b7cf1bc7d3db82ec68bbef3333
 
-https://ibb.co/eSg3uz
+https://www.awesomescreenshot.com/image/3624997/fe2dea9f3200a355a535c0478cdb7407
 
 
 -------------------------------------
