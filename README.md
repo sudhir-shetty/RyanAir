@@ -38,9 +38,10 @@ The automation framework consists of the following technologies:
 -------------------------------------
 -------------------------------------
 
-**Framework details:**
+Framework description:
+-------------------------------------
 
-There are 7 main components of the framework:
+**There are 7 main components of the framework:**
 
 1. Page Objects: -  **com.mytest.automation_ryanair.Pages**
     - Page Object classes will contain all the web element paths and their description. The description will be later used for logging. These classes will return the object of Page.java class. The Page.java class will also contain all the operation function for the web elements.
