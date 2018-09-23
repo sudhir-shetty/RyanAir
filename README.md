@@ -56,7 +56,7 @@ Framework description:
     - Reporting will be done during each transaction on the Web Element. On every checkpoint, screenshot will be taken and added to the report.
    
 5. Driverclass: -  **com.mytest.automation_ryanair.myStepDefination.DriverClass.java**
-    - This file is to create the initial driver. Also the implicit waits as initialized here.
+    - This file is to create the initial driver. Also the implicit waits are initialized here.
     
 6. Feature File: **automation-ryanair/src/test/resource/featues/testcases.feature**
     - Contains the BDD cases.
