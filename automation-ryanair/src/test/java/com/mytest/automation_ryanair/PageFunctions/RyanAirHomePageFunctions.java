@@ -1,5 +1,7 @@
 package com.mytest.automation_ryanair.PageFunctions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 
 import com.mytest.automation_ryanair.Pages.Page;
@@ -43,26 +45,24 @@ public class RyanAirHomePageFunctions extends RyanAirHomePage {
 					break;
 
 				incrementButton.ClickOnElement();
-				incrementButton.DeadWait(500);
 
 				if (incrementButton.name.contains("Infant")) {
 					if (InfantConfirmationButton().CheckElementPresence())
 						InfantConfirmationButton().ClickOnElement();
-					incrementButton.DeadWait(500);
 
 				}
 			}
 
 	}
 
-	public void EnterStartDate(String Date) {
+	public void EnterStartDate(String Date) throws IOException {
 		String[] dateFormat = Date.split("/");
 		DayDateInput().ClearAndEnterTxt(dateFormat[0]);
-		DayDateInput().DeadWait(500);
+		DayDateInput().CheckElementToBeDisplayed(1);
 		MonthDateInput().ClearAndEnterTxt(dateFormat[1]);
-		MonthDateInput().DeadWait(1);
-		YearDateInput().ClearAndEnterTxt(dateFormat[2]+"  s");
-		YearDateInput().DeadWait(500);
+		MonthDateInput().CheckElementToBeDisplayed(1);
+		YearDateInput().ClearAndEnterTxt(dateFormat[2]);
+		
 	}
 
 }

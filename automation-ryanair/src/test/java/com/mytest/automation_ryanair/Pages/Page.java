@@ -60,26 +60,29 @@ public class Page {
 		((JavascriptExecutor) driver).executeScript("arguments[0].focus();", GetWebElement());
 	}
 
-	public void ClearAndEnterTxt(String text) {
+	public void ClearAndEnterTxt(String text) throws IOException {
+		CheckElementToBeDisplayed_NoLog(1);
 		GetWebElement().clear();
 		GetWebElement().sendKeys(text);
 		GetWebElement().sendKeys(Keys.TAB);
 		Reporter.addStepLog("Entered text '" + text + "' in to field '" + this.name + "'");
-		DeadWait(800);
+		//DeadWait(800);
 	}
 
-	public void SelectElementByIndex(String index) {
+	public void SelectElementByIndex(String index) throws IOException {
+		CheckElementToBeDisplayed_NoLog(1);
 		Select selectElement = new Select(GetWebElement());
 		selectElement.selectByIndex(Integer.parseInt(index));
 		Reporter.addStepLog("Selected Index '" + index + "' in field '" + this.name + "'");
-		DeadWait(800);
+		//DeadWait(800);
 	}
 
-	public void SelectElementBytext(String Text) {
+	public void SelectElementBytext(String Text) throws IOException {
+		CheckElementToBeDisplayed_NoLog(1);
 		Select selectElement = new Select(GetWebElement());
 		selectElement.selectByVisibleText(Text);
 		Reporter.addStepLog("Selected Text '" + Text + "' in field '" + this.name + "'");
-		DeadWait(800);
+		//DeadWait(800);
 	}
 
 	public void ClickOnElement() throws Exception {
@@ -91,14 +94,14 @@ public class Page {
 				je.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				GetWebElement().click();
 				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
-				DeadWait(800);
+				//DeadWait(800);
 				return;
 			} catch (WebDriverException e) {
 
 				if (tries-- == 0)
 					throw e;
 				else
-					DeadWait(5000);
+					CheckElementToBeDisplayed_NoLog(5);
 			}
 
 			catch (Exception e) {
@@ -106,7 +109,7 @@ public class Page {
 				if (tries-- == 0)
 					throw e;
 				else
-					DeadWait(1000);
+					CheckElementToBeDisplayed_NoLog(1);
 			}
 		}
 
@@ -123,20 +126,20 @@ public class Page {
 		int tries = 5;
 		while (true) {
 			try {
-
+				CheckElementToBeDisplayed_NoLog(1);
 				Actions ob = new Actions(driver);
 				ob.moveToElement(GetWebElement());
 				ob.click(GetWebElement());
 				Action action = ob.build();
 				action.perform();
 				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
-				DeadWait(1000);
+				
 				return;
 			} catch (Exception e) {
 				if (tries-- == 0)
 					throw e;
 				else
-					DeadWait(1000);
+					CheckElementToBeDisplayed_NoLog(1);
 			}
 		}
 	}
@@ -147,18 +150,18 @@ public class Page {
 		int tries = 5;
 		while (true) {
 			try {
-
+				CheckElementToBeDisplayed_NoLog(1);
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
 				executor.executeScript("arguments[0].scrollIntoView(true);", GetWebElement());
 				executor.executeScript("arguments[0].click();", GetWebElement());
 				Reporter.addStepLog("Clicked on  field '" + this.name + "'");
-				DeadWait(1000);
+				DeadWait(500);
 				return;
 			} catch (Exception e) {
 				if (tries-- == 0)
 					throw e;
 				else
-					DeadWait(1000);
+					CheckElementToBeDisplayed_NoLog(1);
 			}
 		}
 	}
@@ -240,7 +243,7 @@ public class Page {
 		while (true) {
 			try {
 
-				driver.findElement(by);
+				driver.findElement(this.by);
 				TakeScreenShot();
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				return true;
@@ -250,13 +253,34 @@ public class Page {
 					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 					return false;
 				} else
-					DeadWait(1000);
+					DeadWait(500);
+			}
+		}
+	}
+	
+	public boolean CheckElementToBeDisplayed_NoLog(int seconds) throws IOException {
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		int tries = seconds;
+		while (true) {
+			try {
+
+				driver.findElement(this.by);
+				TakeScreenShot();
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				return true;
+			} catch (Exception e) {
+				if (tries-- == 0) {
+					TakeScreenShot();
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					return false;
+				} else
+					DeadWait(500);
 			}
 		}
 	}
 
 	public void AssertElementIsDisplayedWithSeconds(int sec) throws IOException {
-		if (CheckElementToBeDisplayed(sec)) {
+		if (CheckElementToBeDisplayed(sec*2)) {
 			TakeScreenShot();
 			Reporter.addStepLog(
 					"<b><font size='2' color='green'>PASS --- ELEMENT DISPLAYED SUCCESSFULLY !!!</font></b> "

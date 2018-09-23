@@ -8,7 +8,7 @@ public class CommonFunctions {
 
 	public String RandomString(int count) {
 		// TODO Auto-generated method stub
-		return RandomStringUtils.randomAlphabetic(count);
+		return RandomStringUtils.randomAlphabetic(count).toLowerCase();
 	}
 
 	public String getRandomNumberBetween(int min, int max) {

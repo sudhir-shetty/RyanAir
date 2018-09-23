@@ -43,8 +43,8 @@ public class FlightSelectionPageFunctions extends FlightSelectionPage {
 		int randomOffset;
 		for (int i = 1; i <= total; i++) {
 			randomOffset=(int )(Math.random() * ((10 - 1) + 1)) + 1;
+			AvailableSeat(randomOffset).CheckElementPresence();
 			AvailableSeat(randomOffset).JavascriptClickElement();
-			AvailableSeat(randomOffset).DeadWait(1000);
 		}
 
 	}

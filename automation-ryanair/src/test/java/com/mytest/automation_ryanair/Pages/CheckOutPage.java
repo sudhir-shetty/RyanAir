@@ -66,6 +66,13 @@ public class CheckOutPage {
 		return object;
 	}
 
+	public Page GeneralPassengerFirstName_First() {
+		Page object = new Page(driver);
+		object.name = "Passenger First Name	";
+		object.by = By.xpath("(//input[contains(@id,'first')])[1]");
+		return object;
+	}
+	
 	public Page GeneralPassengerFirstName() {
 		Page object = new Page(driver);
 		object.name = "Passenger First Name	";

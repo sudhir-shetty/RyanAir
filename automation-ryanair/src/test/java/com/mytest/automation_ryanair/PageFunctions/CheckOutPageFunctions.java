@@ -24,7 +24,7 @@ public class CheckOutPageFunctions extends CheckOutPage {
 		if (SeeAllCar().CheckElementToBeDisplayed(2))
 			CloseCarMessagePopUp().JavascriptClickElement();
 
-		PayNow().WaitForClickable();
+		PayNow().CheckElementToBeDisplayed_NoLog(1);
 		FillPassengerDetails();
 
 		// Hard-coded value is just for test
@@ -33,55 +33,49 @@ public class CheckOutPageFunctions extends CheckOutPage {
 
 	}
 
-	public void FillPassengerDetails() {
-
+	public void FillPassengerDetails() throws IOException {
+		
+		GeneralPassengerFirstName_First().CheckElementToBeDisplayed(5);
+		
 		for (WebElement element : GeneralPassengerFirstName().GetWebElements()) {
 			element.clear();
 			element.sendKeys(new CommonFunctions().RandomString(5));
-			GeneralPassengerFirstName().DeadWait(500);
 		}
 
 		for (WebElement element : GeneralPassengerLastName().GetWebElements()) {
 			element.clear();
 			element.sendKeys(new CommonFunctions().RandomString(5));
-			GeneralPassengerLastName().DeadWait(500);
 		}
 
 		for (WebElement element : GeneralPassengerTitle().GetWebElements()) {
 			Select select = new Select(element);
 			select.selectByIndex(2);
-			GeneralPassengerTitle().DeadWait(500);
 		}
 
 		if (GeneralInfantFirstName().GetWebElements().size() > 0) {
 			for (WebElement element : GeneralInfantFirstName().GetWebElements()) {
 				element.clear();
 				element.sendKeys(new CommonFunctions().RandomString(5));
-				GeneralInfantFirstName().DeadWait(500);
 			}
 
 			for (WebElement element : GeneralInfantLastName().GetWebElements()) {
 				element.clear();
 				element.sendKeys(new CommonFunctions().RandomString(5));
-				GeneralInfantLastName().DeadWait(500);
 			}
 
 			for (WebElement element : GeneralInfantDayOfBirth().GetWebElements()) {
 				Select select = new Select(element);
 				select.selectByIndex(Integer.parseInt(new CommonFunctions().getRandomNumberBetween(1, 25)));
-				GeneralInfantDayOfBirth().DeadWait(500);
 			}
 
 			for (WebElement element : GeneralInfantMonthOfBirth().GetWebElements()) {
 				Select select = new Select(element);
 				select.selectByIndex(Integer.parseInt(new CommonFunctions().getRandomNumberBetween(1, 10)));
-				GeneralInfantDayOfBirth().DeadWait(500);
 			}
 
 			for (WebElement element : GeneralInfantMonthOfBirth().GetWebElements()) {
 				Select select = new Select(element);
 				select.selectByIndex(Integer.parseInt(new CommonFunctions().getRandomNumberBetween(2017, 2018)));
-				GeneralInfantDayOfBirth().DeadWait(500);
 			}
 		} else {
 			Reporter.addScenarioLog(
@@ -91,7 +85,7 @@ public class CheckOutPageFunctions extends CheckOutPage {
 	}
 
 	public void FillCardInfor(String CardNumber, String CardType, String ExpiryMonth, String ExpiryYear,
-			String SecurityCode, String CardHolder) {
+			String SecurityCode, String CardHolder) throws IOException {
 
 		CardNumber().ClearAndEnterTxt(CardNumber);
 		CardType().SelectElementBytext(CardType);

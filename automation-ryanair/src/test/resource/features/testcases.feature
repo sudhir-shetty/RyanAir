@@ -9,4 +9,4 @@ Feature: Card Decline
 
     Examples: 
       | username              | password | source | destination | date       | no_adults | no_teen | no_child | card_number      | card_type  | card_exp_month | card_exp_year | card_cvv | card_holder |
-      | testkiprosh@gmail.com | Test@123 | Madrid | Dublin      | 07/12/2018 |         2 |       1 |        1 | 5555555555555557 | MasterCard |             10 |          2019 |      265 | Pika Pika   |
+      | testkiprosh@gmail.com | Test@123 | Madrid | Dublin      | 27/11/2018 |         1 |       1 |        1 | 5555555555555557 | MasterCard |             10 |          2019 |      265 | Pika Pika   |
