@@ -108,7 +108,7 @@ https://www.awesomescreenshot.com/image/3624997/fe2dea9f3200a355a535c0478cdb7407
 **Video recording of the execution process:**
 
 https://www.useloom.com/share/6629f207886a40429acce716197a4188
-
+**Note: Now the 'Run->Maven Test' should automatically run the Cucumber test. Pom.xml has been updated with the code to run the tests.**
 
 -------------------------------------
 -------------------------------------
